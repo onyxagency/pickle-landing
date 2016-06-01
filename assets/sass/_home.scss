@@ -1,0 +1,132 @@
+header {
+  nav {
+    .logo {
+      width: 28px;
+      height: 50px;
+      position: absolute;
+      top: 18px;
+      left: 30px;
+      -webkit-animation: spin 3s linear infinite;
+      -moz-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+      &:hover {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+      @media ($tablet) {
+        left: 50px;
+      }
+    }
+    .nav-items {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      @media ($tablet) {
+        right: 50px;
+      }
+      a {
+        color: $gray;
+        font-size: 16px;
+        line-height: 25px;
+        @media ($tablet) {
+          font-size: 20px;
+        }
+        &:first-child {
+          margin-right: 20px;
+          padding-bottom: 5px;
+          @media ($tablet) {
+            margin-right: 30px;
+          }
+          &:hover {
+            color: $green-light;
+            border-bottom: 3px solid $green-light;
+          }
+        }
+      }
+      img {
+        width: 52px;
+        height: 17px;
+        vertical-align: middle;
+        @media ($tablet) {
+          width: 62px;
+          height: 21px;
+        }
+      }
+    }
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 1140px;
+  margin: 120px auto 0;
+  @media ($tablet) {
+    flex-direction: row;
+    height: 100vh;
+    margin: 0 auto 0;
+  }
+  @media ($desktop-large) {
+    max-width: 1400px;
+  }
+  .screen {
+    background: url('/assets/img/phone.jpg') no-repeat;
+    background-position: bottom center;
+    background-size: auto 75%;
+    width: 100%;
+    height: 100vw;
+    @media ($tablet) {
+      width: 50%;
+      height: auto;
+    }
+    @media ($tablet-large) {
+      background-size: auto 82%;
+    }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    @media ($tablet) {
+      width: 50%;
+    }
+    h1 {
+      @extend %font-bold;
+      color: $green;
+      font-size: 60px;
+      line-height: 90px;
+      @media ($tablet) {
+        font-size: 90px;
+        line-height: 114px;
+      }
+    }
+    h2 {
+      @extend %font-book;
+      color: $green-light;
+      font-size: 32px;
+      line-height: 48px;
+      margin-bottom: 24px;
+      @media ($tablet) {
+        font-size: 42px;
+        line-height: 53px;
+      }
+    }
+    a {
+      opacity: .25;
+      transition: opacity .5s ease;
+      &:hover {
+        opacity: 1;
+      }
+      img {
+        width: 150px;
+      }
+    }
+  }
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

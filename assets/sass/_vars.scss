@@ -1,0 +1,43 @@
+/* Fonts */
+@font-face {
+  font-family: 'circular-std-book';
+  src: url('/assets/fonts/CircularStd-Book.woff2') format('woff2'),
+       url('/assets/fonts/CircularStd-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'circular-std-bold';
+  src: url('/assets/fonts/CircularStd-Bold.woff2') format('woff2'),
+       url('/assets/fonts/CircularStd-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%font-book {
+  font-family: 'circular-std-book';
+  font-weight: 400;
+}
+
+%font-bold {
+  font-family: 'circular-std-bold';
+  font-weight: 700;
+}
+
+/* Grid */
+$mobile:        "min-width: 600px";
+$tablet:        "min-width: 768px";
+$tablet-large:  "min-width: 960px";
+$desktop:       "min-width: 1024px";
+$desktop-large: "min-width: 1800px";
+
+/* Colors */
+$white: #fff;
+$gray: #bbb;
+$green: #026F5A;
+$green-light: #6FD16B;
+
+body {
+  @extend %font-book;
+  background: $white;
+}
